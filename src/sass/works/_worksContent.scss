@@ -5,15 +5,15 @@
 .works-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
   padding: 1.25rem;
+  margin-bottom: 2rem;
 
   .work-card {
     box-shadow: 0 5px 20px $shadow_color;
     border-radius: 10px;
 
     figure {
-      text-align: center;
       color: $alt_color;
 
       img {
@@ -23,9 +23,40 @@
       }
 
       .caption {
-        padding: 1.25rem 0;
-        font-size: 1.25rem;
+        padding: 20px;
+        font-size: 2rem;
         font-weight: bold;
+      }
+    }
+
+    .preview {
+      padding: 0 20px;
+
+      a {
+        display: inline-flex;
+        gap: 6px;
+        color: $blue_color;
+      }
+
+      .mdi--external-link {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .techno-list {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      color: white;
+      font-size: 14px;
+      list-style: none;
+      padding: 20px 10px;
+
+      .techno {
+        background-color: $blue_color;
+        padding: 10px;
+        border-radius: 20px;
       }
     }
   }
@@ -34,16 +65,21 @@
 @media (width >= 40rem) {
   .works-content {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
 
     .work-card {
-      padding: 5px;
       border-radius: 10px;
 
       figure {
         img {
           height: 22rem;
         }
+      }
+
+      .techno-list {
+        font-size: 1rem;
+        gap: 10px;
+        padding: 20px;
       }
     }
   }
@@ -54,5 +90,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0;
   }
 }
